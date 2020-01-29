@@ -1,7 +1,10 @@
 # finding-taylor-swift
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This will be a Taylor Swift Fan Site where the user can upload a picture, the picture will be analysed, if Taylor Swift is identified it will be highlighted and the user emailed.
+
+The user can also upload a picture of themselves and friends. Their outfits will be analysed for similarity to outfits worn by Taylor Swift.
+
+This repository will contain the web UI frontend only.
 
 ## Prerequisites
 
