@@ -32,4 +32,11 @@ module('Acceptance | upload', function(hooks) {
 
     assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metallic_silver_tablet_q8.jpg" alt="taylor-swift-metallic-silver-tablet">');
    });
+
+  test('visiting / mobile', async function(assert) {
+    await visit('/');
+    setBreakpoint('mobile');
+
+    assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metallic_silver_mobile_q8.jpg" alt="taylor-swift-metallic-silver-mobile">');
+   });
 });

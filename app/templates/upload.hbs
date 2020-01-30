@@ -1,16 +1,9 @@
+{{#if (media 'isJumbo')}}
   <div class="image-left">
-    {{#if (media 'isJumbo')}}
-      <img src="assets/images/dreamstime_xxl_metallic_silver_jumbo_q5.jpg" alt="taylor-swift-metallic-silver-jumbo">
-    {{/if}}
-    {{#if (media 'isDesktop')}}
-      <img src="assets/images/dreamstime_xxl_metalic_silver_w1000_q8.jpg" alt="taylor-swift-metallic-silver-desktop">
-    {{/if}}
-    {{#if (media 'isTablet')}}
-      <img src="assets/images/dreamstime_xxl_metallic_silver_tablet_q8.jpg" alt="taylor-swift-metallic-silver-tablet">
-    {{/if}}
+    <img src="assets/images/dreamstime_xxl_metallic_silver_jumbo_q5.jpg" alt="taylor-swift-metallic-silver-jumbo">
   </div>
   <div class="detail-right">
-      <h2>FINDING TAYLOR SWIFT</h2>
+      <h2 class="no-padding-margin">FINDING TAYLOR SWIFT</h2>
     {{#if (media 'isJumbo')}}
       Jumbo view!
     {{/if}}
@@ -24,3 +17,53 @@
       Mobile view!
     {{/if}}
   </div>
+{{/if}}
+
+{{#if (media 'isDesktop')}}
+  <div class="image-left">
+    <img src="assets/images/dreamstime_xxl_metalic_silver_w1000_q8.jpg" alt="taylor-swift-metallic-silver-desktop">
+  </div>
+  <div class="detail-right">
+      <h2 class="no-padding-margin">FINDING TAYLOR SWIFT</h2>
+    {{#if (media 'isJumbo')}}
+      Jumbo view!
+    {{/if}}
+    {{#if (media 'isDesktop')}}
+      Desktop view!
+    {{/if}}
+    {{#if (media 'isTablet')}}
+      Tablet view!
+    {{/if}}
+    {{#if (media 'isMobile')}}
+      Mobile view!
+    {{/if}}
+  </div>
+{{/if}}
+
+{{#if (media 'isTablet')}}
+  <div class="image-left">
+    <img src="assets/images/dreamstime_xxl_metallic_silver_tablet_q8.jpg" alt="taylor-swift-metallic-silver-tablet">
+  </div>
+  <div class="detail-right">
+      <h2 class="no-padding-margin">FINDING TAYLOR SWIFT</h2>
+    {{#if (media 'isJumbo')}}
+      Jumbo view!
+    {{/if}}
+    {{#if (media 'isDesktop')}}
+      Desktop view!
+    {{/if}}
+    {{#if (media 'isTablet')}}
+      Tablet view!
+    {{/if}}
+    {{#if (media 'isMobile')}}
+      Mobile view!
+    {{/if}}
+  </div>
+{{/if}}
+
+{{#if (media 'isMobile')}}
+<h2>FINDING TAYLOR SWIFT</h2>
+<div class="mobile-image">
+  <img src="assets/images/dreamstime_xxl_metallic_silver_mobile_q8.jpg" alt="taylor-swift-metallic-silver-mobile">
+</div>
+{{/if}}
