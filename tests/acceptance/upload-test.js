@@ -25,4 +25,11 @@ module('Acceptance | upload', function(hooks) {
 
     assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metalic_silver_w1000_q8.jpg" alt="taylor-swift-metallic-silver-desktop">');
    });
+
+  test('visiting / tablet', async function(assert) {
+    await visit('/');
+    setBreakpoint('tablet');
+
+    assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metallic_silver_tablet_q8.jpg" alt="taylor-swift-metallic-silver-tablet">');
+   });
 });
