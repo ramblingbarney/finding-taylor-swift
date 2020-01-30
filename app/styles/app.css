@@ -1,0 +1,41 @@
+@font-face {
+  font-family:"Free Sans Bold";
+  src:url('/assets/fonts/FreeSansBold.eot?') format("eot"), url('/assets/fonts/FreeSansBold.woff') format('woff'),url('/assets/fonts/FreeSansBold.ttf') format('truetype'),url('/assets/fonts/FreeSansBold.svg#FreeSansBold') format('svg');
+  font-weight:normal;font-style:normal;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #ffaaed;
+  margin: 0;
+}
+
+.image-left {
+  width: 50%;
+  height: 100vh;
+  float: left;
+  overflow: hidden;
+}
+
+.detail-right {
+  margin-left: 15%;
+  height: 100vh;
+}
+
+.left-image {
+  width: 100%;
+}
+
+
+h2 {
+  font-family: 'Free Sans Bold';
+  color: white;
+  text-align: center;
+  font-size: 2.5vw;
+  margin: 0;
+  padding: 0;
+}
