@@ -24,17 +24,25 @@ body {
   width: 50%;
   height: 100vh;
   float: left;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
-.detail-right {
-  margin-left: 15%;
-  height: 100vh;
-  padding-top: 20px;
+.image-height {
+  height: 100%;
 }
 
-.left-image {
-  width: 100%;
+.detail-right {
+  height: 100vh;
+  padding-top: 20px;
+  float: right;
+  max-width: 50%;
+}
+
+.horizontal-centre {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 h2 {
@@ -56,6 +64,11 @@ h3 {
   padding: 0;
 }
 
+.no-padding-margin-tablet {
+  margin: 0;
+  padding-right: 10px;
+}
+
 .mobile-image {
   max-height: 30vh;
   overflow: hidden;
@@ -67,17 +80,19 @@ h3 {
 
 .form-text {
   font-family: 'Free Sans';
+  padding-bottom: 5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+
 
 .white-outline {
   color: white;
 }
 
 .outline-box {
-border: 0px;
-border-style: solid;
-border-color: white;
-padding: 10px;
+border: opx;
+padding: 3px;
 }
 
 .padding-bottom {

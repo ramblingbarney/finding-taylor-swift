@@ -23,15 +23,22 @@ module('Acceptance | upload', function(hooks) {
     await visit('/');
     setBreakpoint('desktop');
 
-    assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metalic_silver_w1000_q8.jpg" alt="taylor-swift-metallic-silver-desktop">');
+    assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metalic_silver_w1000_q8.jpg" alt="taylor-swift-metallic-silver-desktop" class="image-height">');
    });
 
   test('visiting / tablet', async function(assert) {
     await visit('/');
     setBreakpoint('tablet');
 
-    assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metallic_silver_tablet_q8.jpg" alt="taylor-swift-metallic-silver-tablet">');
+    assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metallic_silver_tablet_q8.jpg" alt="taylor-swift-metallic-silver-tablet" class="image-height">');
    });
+
+   test('visiting / tablet action component', async function(assert) {
+     await visit('/');
+     setBreakpoint('tablet');
+
+     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+    });
 
   test('visiting / mobile', async function(assert) {
     await visit('/');
@@ -39,4 +46,11 @@ module('Acceptance | upload', function(hooks) {
 
     assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metallic_silver_mobile_q8.jpg" alt="taylor-swift-metallic-silver-mobile">');
    });
+
+   test('visiting / mobile action component', async function(assert) {
+     await visit('/');
+     setBreakpoint('mobile');
+
+     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+    });
 });
