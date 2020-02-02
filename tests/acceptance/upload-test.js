@@ -26,6 +26,13 @@ module('Acceptance | upload', function(hooks) {
     assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metalic_silver_w1000_q8.jpg" alt="taylor-swift-metallic-silver-desktop" class="image-height">');
    });
 
+   test('visiting / desktop action component', async function(assert) {
+     await visit('/');
+     setBreakpoint('desktop');
+
+     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+    });
+
   test('visiting / tablet', async function(assert) {
     await visit('/');
     setBreakpoint('tablet');
