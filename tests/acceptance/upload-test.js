@@ -19,6 +19,13 @@ module('Acceptance | upload', function(hooks) {
     assert.equal(document.querySelector('img').outerHTML, '<img src="assets/images/dreamstime_xxl_metallic_silver_jumbo_q5.jpg" alt="taylor-swift-metallic-silver-jumbo">');
    });
 
+   test('visiting / jumbo action component', async function(assert) {
+     await visit('/');
+     setBreakpoint('jumbo');
+
+     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+    });
+
   test('visiting / desktop', async function(assert) {
     await visit('/');
     setBreakpoint('desktop');

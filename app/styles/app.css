@@ -40,11 +40,6 @@ body {
   max-width: 50%;
 }
 
-.horizontal-centre {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 h2 {
   font-family: 'Free Sans Bold';
   color: white;
@@ -95,4 +90,9 @@ padding: 10px;
 
 .btn-outline-light:hover {
   color: #ffaaed;
+}
+
+.one-half-width {
+  max-width: 50%;
+  margin: auto;
 }
