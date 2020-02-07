@@ -23,7 +23,7 @@ module('Acceptance | upload', function(hooks) {
      await visit('/');
      setBreakpoint('jumbo');
 
-     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+     assert.equal(document.querySelector('input.input-file').outerHTML, '<input class="btn btn-outline-light white-outline form-text input-file" type="file">');
     });
 
   test('visiting / desktop', async function(assert) {
@@ -37,7 +37,7 @@ module('Acceptance | upload', function(hooks) {
      await visit('/');
      setBreakpoint('desktop');
 
-     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+     assert.equal(document.querySelector('input.input-file').outerHTML, '<input class="btn btn-outline-light white-outline form-text input-file" type="file">');
     });
 
   test('visiting / tablet', async function(assert) {
@@ -51,7 +51,7 @@ module('Acceptance | upload', function(hooks) {
      await visit('/');
      setBreakpoint('tablet');
 
-     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+     assert.equal(document.querySelector('input.input-file').outerHTML, '<input class="btn btn-outline-light white-outline form-text input-file" type="file">');
     });
 
   test('visiting / mobile', async function(assert) {
@@ -65,6 +65,6 @@ module('Acceptance | upload', function(hooks) {
      await visit('/');
      setBreakpoint('mobile');
 
-     assert.equal(document.querySelector('input.custom-file-input').outerHTML, '<input class="custom-file-input" id="inputGroupFile02" type="file">');
+     assert.equal(document.querySelector('input.input-file').outerHTML, '<input class="btn btn-outline-light white-outline form-text input-file" type="file">');
     });
 });

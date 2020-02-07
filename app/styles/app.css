@@ -54,6 +54,33 @@ h3 {
   font-size: 1em;
 }
 
+img {
+  font-family: 'Free Sans';
+  color: white;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.image-preview {
+  height: 10vh;
+  width: auto:
+  border: 1px;
+  border-style: dashed;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+}
+
+.input-file{
+  width: 100%;
+}
+
+.thumbnail-image {
+  width: auto;
+  height: 100%;
+}
+
 .no-padding-margin {
   margin: 0;
   padding-right: 10px;
@@ -95,4 +122,8 @@ padding: 10px;
 .one-half-width {
   max-width: 50%;
   margin: auto;
+}
+
+.button-action:hover {
+  cursor: pointer;
 }

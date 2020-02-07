@@ -12,6 +12,6 @@ module('Integration | Component | user-action', function(hooks) {
 
     await render(hbs`<UserAction />`);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'Submit');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'Upload');
   });
 });

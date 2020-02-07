@@ -3,24 +3,29 @@
     How it works
   </h3>
   <div class="white-outline form-text">
-  Upload a photo to find Taylor Swift or your best party outfit to find out how swiftie you are.  Add your friends emails with a space e.g. 'maria@yahoo.com jane@gmail.com'
+  Upload a photo to find Taylor Swift or your best party outfit to find out how swiftie you are.
 </div>
-
+<div class="input-group mb-3">
+  <div class="custom-file">
+    <input type="file" {{on "change" this.selectedFile}} class="btn btn-outline-light white-outline form-text input-file">
+  </div>
+</div>
+<div class="image-preview">
+  <img src="" alt="Image preview..." id="imageToUpload" class="form-text thumbnail-image">
+</div>
+<div>
+  <button type="submit" class="btn btn-outline-light white-outline form-heading" {{on "click" this.uploadFile}}>Upload</button>
+</div>
+<div class="white-outline form-text">
+  Add your friends emails with a space e.g. 'maria@yahoo.com jane@gmail.com'
+</div>
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1" class="white-outline form-heading">Email</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <p id="emailHelp" class="white-outline form-text">We'll never share your email with anyone else.  Add your friends to share the fun.</p>
   </div>
-  <div class="input-group mb-3">
-    <div class="custom-file">
-      <input type="file" class="custom-file-input" id="inputGroupFile02">
-      <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-    </div>
-    <div class="input-group-append">
-      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-    </div>
-  </div>
+
   <div class="form-check">
     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
     <label class="form-check-label white-outline form-text" for="exampleRadios1">

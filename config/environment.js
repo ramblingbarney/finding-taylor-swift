@@ -6,6 +6,9 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    AWS_REGION: process.env.AWS_REGION,
+    AWS_BUCKET: process.env.AWS_BUCKET,
+    AWS_IDENTITY_POOL_ID: process.env.AWS_IDENTITY_POOL_ID,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
