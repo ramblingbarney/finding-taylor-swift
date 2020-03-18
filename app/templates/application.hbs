@@ -3,4 +3,42 @@
     var global = window;
   }
 </script>
-{{outlet}}
+{{#if (media 'isJumbo')}}
+  <div class="image-left">
+    <img src="assets/images/dreamstime_xxl_metallic_silver_jumbo_q5.jpg" alt="taylor-swift-metallic-silver-jumbo">
+  </div>
+  <div class="detail-right">
+    <h2 class="no-padding-margin">FINDING TAYLOR SWIFT</h2>
+    <div class="one-half-width">
+      {{outlet}}
+  </div>
+  </div>
+{{/if}}
+
+{{#if (media 'isDesktop')}}
+  <div class="image-left">
+    <img src="assets/images/dreamstime_xxl_metalic_silver_w1000_q8.jpg" alt="taylor-swift-metallic-silver-desktop" class="image-height">
+  </div>
+  <div class="detail-right">
+      <h2 class="no-padding-margin">FINDING TAYLOR SWIFT</h2>
+      {{outlet}}
+  </div>
+{{/if}}
+
+{{#if (media 'isTablet')}}
+  <div class="image-left">
+    <img src="assets/images/dreamstime_xxl_metallic_silver_tablet_q8.jpg" alt="taylor-swift-metallic-silver-tablet" class="image-height">
+  </div>
+  <div class="detail-right">
+      <h2 class="no-padding-margin">FINDING TAYLOR SWIFT</h2>
+      {{outlet}}
+  </div>
+{{/if}}
+
+{{#if (media 'isMobile')}}
+<h2>FINDING TAYLOR SWIFT</h2>
+<div class="mobile-image">
+  <img src="assets/images/dreamstime_xxl_metallic_silver_mobile_q8.jpg" alt="taylor-swift-metallic-silver-mobile">
+</div>
+  {{outlet}}
+{{/if}}

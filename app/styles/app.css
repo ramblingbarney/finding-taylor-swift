@@ -127,3 +127,8 @@ padding: 10px;
 .button-action:hover {
   cursor: pointer;
 }
+
+.inline-link-to-text {
+  display: inline;
+  text-decoration: underline;
+}
