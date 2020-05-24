@@ -14,6 +14,7 @@ export default class UserActionComponent extends Component {
 
     if (file.size > 1048576 || !file.name.match(/.(jpg|jpeg|png|gif)$/i)) {
         alert("The file must be an image (jpg|jpeg|png|gif) and less than " + (1048576/1024/1024) + "MB");
+        file = null;
         return false;
     } else {
       reader.addEventListener("load", function () {
@@ -43,12 +44,6 @@ export default class UserActionComponent extends Component {
         IdentityPoolId: String(ENV.AWS_IDENTITY_POOL_ID),
     });
 
-    // var s3 = new AWS.S3({
-    //   apiVersion: "2006-03-01",
-    //   params: { Bucket: String(ENV.AWS_BUCKET) }
-    // });
-
-    // Use S3 ManagedUpload class as it supports multipart uploads
     var upload = new AWS.S3.ManagedUpload({
       params: {
         Bucket: String(ENV.AWS_BUCKET),
