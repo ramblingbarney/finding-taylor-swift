@@ -43,12 +43,6 @@ export default class UserActionComponent extends Component {
         IdentityPoolId: String(ENV.AWS_IDENTITY_POOL_ID),
     });
 
-    // var s3 = new AWS.S3({
-    //   apiVersion: "2006-03-01",
-    //   params: { Bucket: String(ENV.AWS_BUCKET) }
-    // });
-
-    // Use S3 ManagedUpload class as it supports multipart uploads
     var upload = new AWS.S3.ManagedUpload({
       params: {
         Bucket: String(ENV.AWS_BUCKET),
