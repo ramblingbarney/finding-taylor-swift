@@ -13,8 +13,7 @@ export default class UserActionComponent extends Component {
     const reader = new FileReader();
 
     if (file.size > 1048576 || !file.name.match(/.(jpg|jpeg|png|gif)$/i)) {
-        alert("The file must be an image (jpg|jpeg|png|gif) and less than " + (1048576/1024/1024) + "MB");
-        return false;
+        return alert("The file must be an image (jpg|jpeg|png|gif) and less than " + (1048576/1024/1024) + "MB");
     } else {
       reader.addEventListener("load", function () {
         // convert image file to base64 string
@@ -36,6 +35,10 @@ export default class UserActionComponent extends Component {
       }
     let file = files[0];
     let fileName = file.name;
+
+    if (file.size > 1048576 || !file.name.match(/.(jpg|jpeg|png|gif)$/i)) {
+        return alert("The file must be an image (jpg|jpeg|png|gif) and less than " + (1048576/1024/1024) + "MB");
+    }
 
     // Initialize the Amazon Cognito credentials provider
     AWS.config.region = String(ENV.AWS_REGION); // Region
